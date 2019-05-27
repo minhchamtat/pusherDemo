@@ -38,3 +38,7 @@ Route::get('/', function () {
 
 Route::post('/sendmail', 'EventController@postSend');
 
+//rule: Giúp dev viết các hàm để check validate. nó được dùng lại nhiều lần
+//(đã thêm customValidateController )
+Route::get('getCustom', 'CustomValidateControler@getCustom');
+Route::post('postCustom', 'CustomValidateControler@postCustom');
