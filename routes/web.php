@@ -25,3 +25,16 @@ Route::post('/sender', function () {
     event(new formSubmit($comment, $name));
     return redirect('/sender');
 });
+
+//tranformer
+//(đã thêm bảng post và user. file liên quan: folder Transformer, app/post, app/controller/postcontroller)
+Route::get('/tranformer', 'PostController@getPost'); 
+
+//event
+//(đã thêm bảng discounts, file liên quan: event/discountEvent.php, folder app/listeners, sửa file app/Providers/EventServiceProvider.php
+Route::get('/', function () {
+    return view('event');
+});
+
+Route::post('/sendmail', 'EventController@postSend');
+
