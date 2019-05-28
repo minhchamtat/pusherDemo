@@ -1,0 +1,11 @@
+.color-white {
+	color: white;
+	text-decoration: none;
+}
+.color-white :hover{
+	color: white;
+	text-decoration: none;
+}
+.delete {
+	margin-left:5%;
+}

@@ -32,13 +32,22 @@ Route::get('/tranformer', 'PostController@getPost');
 
 //event
 //(đã thêm bảng discounts, file liên quan: event/discountEvent.php, folder app/listeners, sửa file app/Providers/EventServiceProvider.php
-Route::get('/', function () {
+Route::get('/event', function () {
     return view('event');
 });
 
 Route::post('/sendmail', 'EventController@postSend');
 
-//rule: Giúp dev viết các hàm để check validate. nó được dùng lại nhiều lần
+//rule: Giúp dev viết các hàm để check validate. nó được dùng lại nhiều lần (tranform)
 //(đã thêm customValidateController )
 Route::get('getCustom', 'CustomValidateControler@getCustom');
 Route::post('postCustom', 'CustomValidateControler@postCustom');
+
+//reactJs
+//cần chạy thư viện npm install --save-dev @babel/plugin-proposal-class-properties
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::resource('products', 'ProductController');
+// Route::post('product/create', 'ProductController@create');
