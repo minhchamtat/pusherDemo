@@ -1,6 +1,7 @@
 <?php
 
 use App\Events\formSubmit;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,3 +52,12 @@ Route::get('/', function () {
 
 Route::resource('products', 'ProductController');
 // Route::post('product/create', 'ProductController@create');
+
+//check multi img
+Route::get('/img', function () {
+    return view('img');
+});
+
+Route::post('submitImg', function (Request $request) {
+	
+})
