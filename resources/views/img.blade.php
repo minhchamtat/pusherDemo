@@ -92,6 +92,7 @@ https://www.prepbootstrap.com/bootstrap-template/image-checkbox
   </div>
 	<form method="post" action="submitImg">
 		<button>submit</button>
+		
 	</form>
 </div>
   	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
